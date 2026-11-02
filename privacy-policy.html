@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Health & Wealth</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+            --accent-light: #34d399;
+            --border: #334155;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #ffffff;
+                --text-main: #0f172a;
+                --text-muted: #64748b;
+                --accent: #059669;
+                --accent-light: #10b981;
+                --border: #e2e8f0;
+            }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        h1 { font-size: 2.2rem; margin-bottom: 8px; color: var(--text-main); }
+        .last-updated { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; }
+        .summary-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-weight: 500;
+        }
+        h2 { font-size: 1.4rem; margin-top: 32px; margin-bottom: 12px; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+        h3 { font-size: 1.1rem; margin-top: 18px; margin-bottom: 6px; color: var(--accent-light); }
+        p, ul { margin-bottom: 16px; color: var(--text-main); }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 8px; }
+        code { background: rgba(148, 163, 184, 0.15); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">Privacy First &amp; Zero Cloud</span>
+        <h1>Privacy Policy</h1>
+        <div class="last-updated">Last Updated: October 14, 2026</div>
+
+        <p><strong>Health &amp; Wealth</strong> ("the App", "we", "our") is designed from the ground up as a <strong>privacy-first, offline-first personal tracking tool</strong>. We believe your physical health and personal finances are strictly your own business.</p>
+
+        <div class="summary-box">
+            <strong>Key Summary:</strong> We do not collect, store, transmit, sell, or share any personal data. All data stays 100% on your device in local sandboxed storage.
+        </div>
+
+        <h2>1. Zero Data Collection &amp; Zero Telemetry</h2>
+        <ul>
+            <li><strong>No Account Required:</strong> You do not need to register, log in, or provide an email address, name, or phone number to use the App.</li>
+            <li><strong>No Remote Tracking or Analytics:</strong> The App contains no advertising networks, no third-party tracking cookies, and no analytics SDKs (e.g., Google Analytics, Firebase Analytics, Meta SDK).</li>
+            <li><strong>No Cloud Servers:</strong> The public release operates completely offline and never uploads your health or financial information to any external server.</li>
+        </ul>
+
+        <h2>2. On-Device Local Storage</h2>
+        <p>All data entered or generated while using the App—including:</p>
+        <ul>
+            <li>Daily food logs, custom meals, nutrition goals, and calorie intake;</li>
+            <li>Body measurements, weight history, and workout logs;</li>
+            <li>Expense records, budget pockets, income estimates, and savings targets</li>
+        </ul>
+        <p>is stored exclusively in a secure, sandboxed local SQLite database on your device. We have no access to this database.</p>
+
+        <h2>3. Device Permissions &amp; How They Are Used</h2>
+        <p>The App requests only the permissions necessary to provide features you choose to use. All processing happens strictly on your device in real time:</p>
+
+        <h3>A. Camera (<code>android.permission.CAMERA</code>)</h3>
+        <p>Allows scanning food barcodes to look up nutritional values and scanning paper receipts or food nutrition panels via Optical Character Recognition (OCR). <strong>Processing is 100% on-device</strong> using Google ML Kit. No camera frames, photos, or videos are saved or uploaded.</p>
+
+        <h3>B. Auto-Pay Notification Listener (<code>BIND_NOTIFICATION_LISTENER_SERVICE</code>)</h3>
+        <p>Enables optional, automated local expense logging by reading payment notifications from supported banking and wallet apps (such as Google Wallet and Revolut). <strong>Transaction amounts and vendor names are parsed strictly locally on your device</strong> to log expenses into your local budget pockets. Notification contents are never uploaded or transmitted.</p>
+
+        <h3>C. Physical Activity (<code>android.permission.ACTIVITY_RECOGNITION</code>)</h3>
+        <p>Reads step counts from your phone's built-in step counter hardware to estimate daily active calorie expenditure. No GPS, location tracking, or route histories are collected.</p>
+
+        <h3>D. Local Notifications (<code>android.permission.POST_NOTIFICATIONS</code>)</h3>
+        <p>Used solely to trigger optional local reminders (e.g., protein pacing reminders, hydration nudges, or daily summary notifications). All notifications are scheduled locally on the device.</p>
+
+        <h2>4. Data Retention, Backup, and Deletion</h2>
+        <p>Because all data is stored locally on your device, you maintain complete ownership. You can delete individual entries anytime within the app. Uninstalling the app or clearing its data in Android Settings permanently removes all stored information from your device.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>The App does not knowingly collect or solicit any personal information from children under the age of 13. Since no personal data is collected or transmitted from any user, the App complies with the Children’s Online Privacy Protection Act (COPPA) and General Data Protection Regulation (GDPR).</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, please contact:</p>
+        <ul>
+            <li><strong>Developer:</strong> Health &amp; Wealth</li>
+            <li><strong>Email:</strong> support@healthandwealth.app</li>
+        </ul>
+
+        <div class="footer">
+            &copy; 2026 Health &amp; Wealth. All rights reserved. 100% On-Device Privacy.
+        </div>
+    </div>
+</body>
+</html>
